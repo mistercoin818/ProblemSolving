@@ -14,12 +14,12 @@ int main() {
 	cin >> input;
 	long long sum = 0;
 	for (int i = 0; i < L; ++i) {
-		int p = 1;
+		long long p = 1;
 		for (int j = 0; j < i; ++j) {
 			p *= r;
 			p %= M;
 		}
-		int temp = input[i] - 96;
+		long long temp = input[i] - 96;
 		sum += (temp * p) % M;
 	}
 	cout << sum % M;
